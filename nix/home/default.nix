@@ -4,6 +4,7 @@
     ./modules/claude-code.nix
     ./modules/gh.nix
     ./modules/git.nix
+    ./modules/orca.nix
     ./modules/zsh.nix
   ];
 
