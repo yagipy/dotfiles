@@ -9,7 +9,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    irisDotfiles.url = "git+https://github.com/yagipy/iris?dir=dotfiles";
+    irisDotfiles.url = "github:yagipy/iris?dir=dotfiles";
   };
 
   outputs =

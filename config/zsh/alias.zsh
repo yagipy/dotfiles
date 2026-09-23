@@ -1,1 +1,7 @@
+alias ga='git add'
+alias gb='git branch'
 alias gc='git commit'
+alias gco='git checkout'
+alias gd='git diff'
+alias gl='git log --pretty=oneline --graph --decorate --all'
+alias gs='git status'

@@ -25,16 +25,16 @@
         "dir": "dotfiles",
         "lastModified": 1790164327,
         "narHash": "sha256-wa7kHpUA60MWBXPzc3jD7uhOyuA335Lnc7uqMmdmcSw=",
-        "ref": "refs/heads/main",
+        "owner": "yagipy",
+        "repo": "iris",
         "rev": "5f9d5b0a8c7a76518010b080567e60ddfce944a8",
-        "revCount": 11,
-        "type": "git",
-        "url": "https://github.com/yagipy/iris"
+        "type": "github"
       },
       "original": {
         "dir": "dotfiles",
-        "type": "git",
-        "url": "https://github.com/yagipy/iris"
+        "owner": "yagipy",
+        "repo": "iris",
+        "type": "github"
       }
     },
     "nix-darwin": {

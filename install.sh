@@ -35,7 +35,7 @@ fi
 cd "$DOTFILES_DIR"
 
 echo "=> nix-darwinの設定をビルド"
-system="$(nix build --no-link --print-out-paths ".#darwinConfigurations.$USER.system")"
+system="$(nix build --no-link --print-out-paths --option access-tokens "github.com=$(gh auth token)" ".#darwinConfigurations.$USER.system")"
 
 # Nixのインストーラーが書き換えたファイルはnix-darwinが上書きを拒否するため退避
 for file in /etc/bashrc /etc/zshrc /etc/zshenv /etc/nix/nix.conf; do
