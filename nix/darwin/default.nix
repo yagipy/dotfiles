@@ -14,6 +14,12 @@ let
     nix-darwin.lib.darwinSystem {
       modules = [
         home-manager.darwinModules.home-manager
+        (
+          { lib, ... }:
+          {
+            nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "claude-code" ];
+          }
+        )
         {
           nixpkgs.hostPlatform = system;
           nix = import ./nix.nix;
