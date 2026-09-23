@@ -1,12 +1,9 @@
 [user]
     email = email@yagipy.me
     name = yagipy
-
 [gpg]
     format = ssh
-
 [user]
     signingkey = ~/.ssh/id_ed25519.yagipy.pub
-
 [commit]
     gpgsign = true

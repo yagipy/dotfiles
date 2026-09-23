@@ -1,0 +1,4 @@
+[includeIf "gitdir:~/dotfiles/"]
+	path = ~/dotfiles/.gitconfig
+[includeIf "gitdir:~/iris/"]
+	path = ~/iris/.gitconfig
