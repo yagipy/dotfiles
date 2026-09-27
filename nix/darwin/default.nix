@@ -17,9 +17,16 @@ let
         (
           { lib, ... }:
           {
-            nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "claude-code" ];
+            nixpkgs.config.allowUnfreePredicate =
+              pkg:
+              builtins.elem (lib.getName pkg) [
+                "claude-code"
+                "raycast"
+                "terraform"
+              ];
           }
         )
+        ./apps.nix
         {
           nixpkgs.hostPlatform = system;
           nix = import ./nix.nix;
