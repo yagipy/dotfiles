@@ -9,6 +9,7 @@
     ./modules/ghostty.nix
     ./modules/git.nix
     ./modules/go.nix
+    ./modules/google-cloud-sdk.nix
     ./modules/parallel.nix
     ./modules/raycast.nix
     ./modules/reviewdog.nix
