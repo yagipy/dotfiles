@@ -3,6 +3,7 @@
   imports = [
     ./modules/claude-code.nix
     ./modules/codex.nix
+    ./modules/crane.nix
     ./modules/direnv.nix
     ./modules/fzf.nix
     ./modules/gh.nix
