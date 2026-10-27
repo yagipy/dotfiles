@@ -15,6 +15,7 @@
     ./modules/parallel.nix
     ./modules/raycast.nix
     ./modules/reviewdog.nix
+    ./modules/ssh.nix
     ./modules/terraform.nix
     ./modules/vscode.nix
     ./modules/zsh.nix
