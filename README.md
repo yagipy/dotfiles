@@ -3,11 +3,13 @@
 ## セットアップ
 ```
 curl -fsSL https://raw.githubusercontent.com/yagipy/dotfiles/master/install.sh | sh
+cd ~/dotfiles
+sudo darwin-rebuild switch --flake ~/dotfiles#$USER --option access-tokens "github.com=$(gh auth token)"
 ```
 
 ## 反映
 ```
-sudo darwin-rebuild switch --flake ~/dotfiles#$USER --option access-tokens "github.com=$(gh auth token)"
+make apply
 ```
 
 ## 参考資料

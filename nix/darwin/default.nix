@@ -21,8 +21,12 @@ let
               pkg:
               builtins.elem (lib.getName pkg) [
                 "claude-code"
+                "dia-browser"
+                "notion-app"
                 "raycast"
+                "slack"
                 "terraform"
+                "vscode"
               ];
           }
         )
@@ -30,7 +34,7 @@ let
         {
           nixpkgs.hostPlatform = system;
           nix = import ./nix.nix;
-          system = import ./system.nix;
+          system = (import ./system.nix) // { primaryUser = username; };
           users.users.${username}.home = homeDirectory;
 
           home-manager = {
