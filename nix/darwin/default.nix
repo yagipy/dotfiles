@@ -27,6 +27,7 @@ let
                 "slack"
                 "terraform"
                 "vscode"
+                "vscode-extension-MS-python-vscode-pylance"
               ];
           }
         )
