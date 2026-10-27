@@ -2,3 +2,5 @@
 	path = ~/dotfiles/.gitconfig
 [includeIf "gitdir:~/iris/"]
 	path = ~/iris/.gitconfig
+[includeIf "gitdir:~/yagipy-workspace/"]
+	path = ~/yagipy-workspace/.gitconfig
