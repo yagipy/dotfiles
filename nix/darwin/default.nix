@@ -22,6 +22,7 @@ let
               builtins.elem (lib.getName pkg) [
                 "claude-code"
                 "dia-browser"
+                "google-chrome"
                 "notion-app"
                 "raycast"
                 "slack"

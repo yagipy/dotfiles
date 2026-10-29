@@ -21,6 +21,9 @@
     ./modules/zsh.nix
   ];
 
-  home.packages = [ pkgs.gnumake ];
+  home.packages = [
+    pkgs.gnumake
+    pkgs.python3
+  ];
   home.stateVersion = "26.11";
 }

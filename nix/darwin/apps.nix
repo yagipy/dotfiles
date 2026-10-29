@@ -28,6 +28,7 @@ in
     (pkgs.callPackage ../packages/dia.nix { })
     (pkgs.callPackage ../packages/orca.nix { })
     pkgs.ghostty-bin
+    pkgs.google-chrome
     pkgs.notion-app
     pkgs.raycast
     pkgs.slack
