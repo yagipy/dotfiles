@@ -1,5 +1,9 @@
 { pkgs, ... }:
 let
+  warpInstaller = pkgs.runCommand "cloudflare-warp-installer-${pkgs.cloudflare-warp.version}" { } ''
+    mkdir -p "$out"
+    cp ${pkgs.cloudflare-warp.src} "$out/Cloudflare_WARP.pkg"
+  '';
   karabinerInstaller = pkgs.runCommand "karabiner-elements-installer-${pkgs.karabiner-elements.version}"
     { nativeBuildInputs = [ pkgs.undmg ]; }
     ''
@@ -10,6 +14,17 @@ let
 in
 {
   system.activationScripts.postActivation.text = ''
+    (
+      set -e
+      marker=/var/lib/nix-cloudflare-warp/installer
+      if [ ! -f "$marker" ] || \
+         [ "$(cat "$marker")" != "${warpInstaller}" ] || \
+         [ ! -d "/Applications/Cloudflare WARP.app" ]; then
+        /usr/sbin/installer -pkg "${warpInstaller}/Cloudflare_WARP.pkg" -target /
+        mkdir -p /var/lib/nix-cloudflare-warp
+        printf '%s\n' '${warpInstaller}' > "$marker"
+      fi
+    )
     (
       set -e
       marker=/var/lib/nix-karabiner-elements/installer

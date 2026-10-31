@@ -21,6 +21,7 @@ let
               pkg:
               builtins.elem (lib.getName pkg) [
                 "claude-code"
+                "cloudflare-warp"
                 "dia-browser"
                 "google-chrome"
                 "notion-app"
