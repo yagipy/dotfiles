@@ -22,6 +22,7 @@
   ];
 
   home.packages = [
+    pkgs.clang
     pkgs.gnumake
     pkgs.python3
   ];
