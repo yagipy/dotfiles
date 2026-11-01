@@ -42,6 +42,7 @@ in
     (pkgs.callPackage ../packages/clipy.nix { })
     (pkgs.callPackage ../packages/dia.nix { })
     (pkgs.callPackage ../packages/orca.nix { })
+    pkgs.chatgpt
     pkgs.ghostty-bin
     pkgs.google-chrome
     pkgs.notion-app

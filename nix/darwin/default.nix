@@ -20,6 +20,7 @@ let
             nixpkgs.config.allowUnfreePredicate =
               pkg:
               builtins.elem (lib.getName pkg) [
+                "chatgpt"
                 "claude-code"
                 "cloudflare-warp"
                 "dia-browser"
