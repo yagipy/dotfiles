@@ -24,6 +24,8 @@
   home.packages = [
     pkgs.clang
     pkgs.gnumake
+    pkgs.k9s
+    pkgs.kubectl
     pkgs.python3
   ];
   home.stateVersion = "26.11";

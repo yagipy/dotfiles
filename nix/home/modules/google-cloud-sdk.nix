@@ -1,4 +1,8 @@
 { pkgs, ... }:
 {
-  home.packages = [ pkgs.google-cloud-sdk ];
+  home.packages = [
+    (pkgs.google-cloud-sdk.withExtraComponents [
+      pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+    ])
+  ];
 }
