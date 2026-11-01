@@ -1,11 +1,11 @@
 { lib, stdenvNoCC, fetchurl, undmg }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "clipy";
-  version = "1.4.0";
+  version = "1.4.1";
 
   src = fetchurl {
     url = "https://github.com/Clipy/Clipy/releases/download/${finalAttrs.version}/Clipy_${finalAttrs.version}.dmg";
-    sha256 = "69630237ec929c11414775aeff20804359f9e3a7aa8a6d09178d41d4b7bd10ab";
+    sha256 = "sha256-FMBnSCqx608gflsiyids4/sZlo4CFCI45Njhl8WUvOM=";
   };
 
   nativeBuildInputs = [ undmg ];

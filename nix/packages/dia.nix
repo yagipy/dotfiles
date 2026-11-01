@@ -1,11 +1,11 @@
 { lib, stdenvNoCC, fetchurl, unzip }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "dia-browser";
-  version = "1.54.2";
+  version = "1.55.1";
 
   src = fetchurl {
-    url = "https://releases.diabrowser.com/release/Dia-${finalAttrs.version}-89247.zip";
-    sha256 = "825133fc5e684a41f7411596dd76bbacf10120876b5d88b841c126001400df82";
+    url = "https://releases.diabrowser.com/release/Dia-${finalAttrs.version}-89833.zip";
+    sha256 = "sha256-L+VKY0ObwpxeAsCdBjpdyL9y6wwHRiz5TCFz6hcklsM=";
   };
 
   nativeBuildInputs = [ unzip ];

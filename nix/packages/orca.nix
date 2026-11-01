@@ -1,11 +1,11 @@
 { lib, stdenvNoCC, fetchurl, undmg }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "orca-ide";
-  version = "1.4.239";
+  version = "1.4.245";
 
   src = fetchurl {
     url = "https://github.com/stablyai/orca/releases/download/v${finalAttrs.version}/orca-macos-arm64.dmg";
-    sha256 = "5a870f3be444abcef4c14fd53a0cb398744e7a4f4aa105376ee810d195e33780";
+    sha256 = "sha256-pBO2WZiSawpGVNa34MD3iaX3WK06d3o97GDI3nIrutg=";
   };
 
   nativeBuildInputs = [ undmg ];
